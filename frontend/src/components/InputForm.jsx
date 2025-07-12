@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { BACKEND_URL } from "./utils/utils";
+import { BACKEND_URL } from "@/Utils/utils";
 
 export default function InputForm({setIsOpen}) {
    const [email,setEmail]=useState("")

@@ -6,7 +6,7 @@ import { FaHeart } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import axios from 'axios';
-import { BACKEND_URL } from "./utils/utils";
+import { BACKEND_URL } from "@/Utils/utils";
 
 export default function RecipeItems() {
     const recipes = useLoaderData()

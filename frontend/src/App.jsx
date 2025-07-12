@@ -7,7 +7,7 @@ import axios from 'axios'
 import  AddFoodRecipe  from './pages/AddFoodRecipe'
 import EditRecipe from './pages/EditRecipe'
 import RecipeDetails from './pages/RecipeDetails'
-import { BACKEND_URL } from "../utils/utils";
+import { BACKEND_URL } from '@/Utils/utils';
 
 
 const getAllRecipes=async()=>{
