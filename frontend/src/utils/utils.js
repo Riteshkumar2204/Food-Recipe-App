@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://food-recipe-app-dge9.onrender.com";

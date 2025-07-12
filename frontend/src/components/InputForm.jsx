@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { BACKEND_URL } from "./utils/utils";
 
 export default function InputForm({setIsOpen}) {
    const [email,setEmail]=useState("")
@@ -7,10 +8,11 @@ export default function InputForm({setIsOpen}) {
    const [isSignUp,setIsSignUp]=useState(false) 
    const [error,setError]=useState("")
 
+
   const handleOnSubmit=async(e)=>{
     e.preventDefault()
     let endpoint=(isSignUp) ? "signUp" : "login"
-    await axios.post(`http://localhost:5000/${endpoint}`,{email,password})
+    await axios.post(`${BACKEND_URL}/${endpoint}`,{email,password})
     .then((res)=>{
         localStorage.setItem("token",res.data.token)
         localStorage.setItem("user",JSON.stringify(res.data.user))

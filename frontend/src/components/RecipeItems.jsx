@@ -6,6 +6,7 @@ import { FaHeart } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import axios from 'axios';
+import { BACKEND_URL } from "./utils/utils";
 
 export default function RecipeItems() {
     const recipes = useLoaderData()
@@ -21,7 +22,7 @@ export default function RecipeItems() {
     }, [recipes])
 
     const onDelete = async (id) => {
-        await axios.delete(`http://localhost:5000/recipe/${id}`)
+        await axios.delete(`${BACKEND_URL}/recipe/${id}`)
             .then((res) => console.log(res))
         setAllRecipes(recipes => recipes.filter(recipe => recipe._id !== id))
         let filterItem = favItems.filter(recipe => recipe._id !== id)
